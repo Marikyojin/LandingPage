@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import './index.css';
 const Header = ({cardRef}) => {
  
@@ -13,11 +13,11 @@ const Header = ({cardRef}) => {
                 Header conteudo
             </span>
             <br/>
-            <span className='header-text'>
+            <span  className='header-text'>
                 Card 1
             </span>
             <br/>
-            <span className='header-text'>
+            <span  className='header-text'>
                 Card 2
             </span>
             <br/>

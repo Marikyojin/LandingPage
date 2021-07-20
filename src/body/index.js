@@ -5,12 +5,10 @@ import ContactContainer from '../contatctContainer';
 import './index.css';
 const Body = () =>{
     const cardRef = useRef(null);
-    const card1Ref = useRef(null);
-    const card2Ref = useRef(null);
 
     return(
         <div id="body">
-            <Header card1Ref={card1Ref} card2Ref={card2Ref} cardRef={cardRef}/>
+            <Header cardRef={cardRef}/>
             <div className="body-container">
             <Card
             title="Card 1"
