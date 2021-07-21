@@ -4,21 +4,12 @@ import TextField from '@material-ui/core/TextField';
 import './index.css';
 
 const Card = (props) => {
-    function Button(props) {
-        let botaoRef = useRef();
-        let { buttonProps } = useButton(props, botaoRef);
 
-        return (
-            <button {...buttonProps} ref={botaoRef}>
-                {props.children}
-            </button>
-        );
-    }
 
 
 
     return (
-        <div className='container'>
+        <div ref={props.iconsRef} className='container'>
             <div className="small-div">
                 <i className={props.className}></i>
                 <img src={props.img} alt={props.name} title={props.titleImg} />
@@ -34,7 +25,7 @@ const Card = (props) => {
                 </span>
             </div>
             <div>
-                <Button onPress={() => alert('Button pressed!')}>Press me</Button>
+                <button onPress={() => alert('Button pressed!')}>Press me</button>
             </div>
 
             <form style={{marginTop:20}}>
