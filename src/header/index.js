@@ -29,6 +29,10 @@ const Header = (props) => {
                 Card 4
             </span>
             <br/>
+            <span onClick={()=>props.iconsRef[4].current.scrollIntoView({behavior: 'smooth'})} className='header-text'>
+                Minha foto
+            </span>
+            <br/>
             <span onClick={()=>props.iconsRef[3].current.scrollIntoView({behavior: 'smooth'})} className='header-text'>
                 Contato
             </span>

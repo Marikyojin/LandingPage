@@ -2,6 +2,9 @@ import React, { useRef } from 'react';
 import Header from '../header';
 import Card from '../card';
 import ContactContainer from '../contatctContainer';
+import eu from '../img/eu.jpg'
+import { useFocus } from '@react-aria/interactions';
+
 import './index.css';
 
 
@@ -11,11 +14,15 @@ const Body = () => {
     const terceiroRef = useRef();
     const segundoRef = useRef();
     const quartoRef = useRef();
+    const iconRef = useRef();
+
+
+  
 
 
     return (
         <div id="body">
-            <Header iconsRef={[segundoRef, terceiroRef,quartoRef, cardRef]} />
+            <Header iconsRef={[segundoRef, terceiroRef, quartoRef, cardRef,iconRef]} />
             <div className="body-container">
                 <Card
                     title="Card 1"
@@ -48,7 +55,21 @@ const Body = () => {
                     name="gatinho astronauta"
                     titleImg="gatinho astronauta"
                 />
+                <div>
+                    <div>
+                        <h1>Using a local image in React!</h1>
+                        <div >
 
+                            <img 
+                            ref={iconRef} 
+                            src={eu} 
+                            aria-label='minha foto' 
+                            width={15} height={15} 
+                            onClick={() => window.open('https://www.instagram.com/marikyojin/')}
+                             />
+                        </div>
+                    </div>
+                </div>
 
                 <ContactContainer cardRef={cardRef} />
             </div>
